@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juniperium - Fast, Free, Open-Source, Great, Absoutly No AI and Yours</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,14 +15,39 @@
 
     <hr>
     <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Link to the sources</h1>
-
+    
     <a href="https://github.com/GDDASH45/Juniperium">Sources on the main branch</a>
 
     <hr>
     <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Downloads</h1>
+    <div id="download-section"></div>
+
+    <hr>
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sources by tags</h1>
+    <div id="tags-section"></div>
 
     <hr>
     <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Sources from different branches</h1>
+
+    <hr>
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Surf the source</h1>
+
+    <a href="sources.html">Source explorer</a>
+
+    <!-- My Beautiful Gethub library -->
+    <script src="gethub.js"></script>
+    <script>
+        // Initialize gethub
+        const gh = new Gethub({
+            owner: 'GDDASH45',
+            repo: 'Juniperium',
+            target: '#download-section',
+            tagsTarget: '#tags-section'
+        });
+
+        gh.init();
+        gh.initTags();
+    </script>
     
 </body>
 </html>
