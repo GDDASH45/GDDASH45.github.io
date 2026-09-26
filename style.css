@@ -1,0 +1,73 @@
+body {
+  /* Smooth diagonal gradient from teal to Teto ruby */
+  background: linear-gradient(135deg, teal, #9b111e);
+  
+  /* Ensures the gradient covers the entire height of the viewport */
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: #ffcccc; /* Soft pastel red/pink tint that matches the ruby theme */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+/* Creates the hidden underline */
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: teal; /* Contrasts nicely over dark areas */
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.gethub-link {
+  display: inline-block;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  margin: 6px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.gethub-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(122, 252, 255, 0.4);
+}
+
+.gethub-tag-link {
+  display: inline-block;
+  color: #ffcccc;
+  background: rgba(155, 17, 30, 0.2); /* Ruby-tinted background */
+  padding: 8px 16px;
+  margin: 6px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(155, 17, 30, 0.4);
+  transition: all 0.2s ease;
+}
+
+.gethub-tag-link:hover {
+  background: rgba(155, 17, 30, 0.4);
+  box-shadow: 0 0 10px rgba(155, 17, 30, 0.6);
+  color: #ffffff;
+}
